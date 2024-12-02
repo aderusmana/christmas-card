@@ -1,0 +1,101 @@
+.christmas-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.envelope {
+  width: 420px;
+  height: 250px;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.envelope-front,
+.envelope-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.envelope-front img,
+.envelope-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.envelope-back {
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back-cover {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  background-color: #c33d3d;
+  top: -20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.snow-svg {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.photo {
+  position: absolute;
+  scale: 50vw;
+  top: -20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .envelope {
+    width: 340px;
+    height: 250px;
+  }
+  
+  .back-cover {
+    height: 80px;
+    top: -15px;
+  }
+
+  .photo{
+    scale: 50vw;
+    top: -40%;
+    left: -88%;
+    scale: 70%;
+  }
+}
+
+.envelope-back.open {
+  z-index: 1;
+}
+
+.snow-image {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(0%);
+  scale: 75%;
+  z-index: 5;
+  top: -10%;
+}

@@ -1,38 +1,36 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url('/public/assets/bg-edit.png'); /* Pastikan path ini benar */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Mengubah arah flex untuk membuat header berada di atas */
+  justify-content: flex-start; /* Mengubah posisi konten untuk membuat header berada di atas */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow: hidden; /* Menghilangkan scrollbar untuk mencegah scrolling */
 }
 
-.App-link {
-  color: #61dafb;
+.App-Header {
+  width: 100%; /* Membuat header responsif terhadap lebar layar */
+  padding: 20px; /* Menambahkan jarak antara header dan konten */
+  background-color: rgba(255, 255, 255, 0.8); /* Menambahkan warna latar belakang untuk header */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk memberikan efek 3D */
+  text-align: center; /* Mengatur teks untuk berada di tengah */
+  font-size: 24px; /* Mengatur ukuran font untuk header */
+  font-weight: bold; /* Mengatur font untuk tebal */
+  color: #333; /* Mengatur warna teks untuk header */
+  margin-bottom: 20px; /* Menambahkan jarak antara header dan konten */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Tambahkan media query untuk membuat tampilan responsif terhadap ukuran layar */
+@media (max-width: 768px) {
+  .App {
+    height: 100vh; /* Mengubah tinggi App untuk responsif terhadap ukuran layar */
   }
-  to {
-    transform: rotate(360deg);
+  .App-Header {
+    padding: 10px; /* Mengubah jarak untuk header pada ukuran layar kecil */
+    font-size: 18px; /* Mengubah ukuran font untuk header pada ukuran layar kecil */
   }
 }
